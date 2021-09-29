@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mission to Mars</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="jumbotron text-center">
+      <img src="{{ data.mars_url }}">
+      <h1>Mars! Mars! Mars!</h1>
+      <p>Find out the latest news about Mars</p>
+      <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">What's the lastest news about Mars?</a></p>
+    </div>
+    
+    <h2>The Lastest news from Mars is that {{data.mars_title }}! </h2>
+    <h3> {{ data.mars_p}}</h3>
+    
+    <div class="table-responsive">
+      <table class="table">
+        {{data.mars_table}}
+      </table>
+      <h2>There are also some Hemispheres:</h2>
+      <img src="{{data.mars_hl[0].img_url}}">
+    </div>
+  </div>
+  </div>
+</body>
+
+</html>
