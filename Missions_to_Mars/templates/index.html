@@ -12,24 +12,61 @@
 <body>
   <div class="container-fluid">
     <div class="jumbotron text-center">
-      <img src="{{ data.mars_url }}">
+      <img src="{{ data.mars_url }}" class="img-rounded"> 
       <h1>Mars! Mars! Mars!</h1>
       <p>Find out the latest news about Mars</p>
       <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">What's the lastest news about Mars?</a></p>
     </div>
-    
-    <h2>The Lastest news from Mars is that {{data.mars_title }}! </h2>
-    <h3> {{ data.mars_p}}</h3>
-    
-    <div class="table-responsive">
-      <table class="table">
-        {{data.mars_table}}
-      </table>
-      <h2>There are also some Hemispheres:</h2>
-      <img src="{{data.mars_hl[0].img_url}}">
+
+    <div class="alert alert-info">
+      <strong>The Lastest news from Mars is that {{data.mars_title }}! </strong> 
+      <p> {{ data.mars_p}}</p>
     </div>
+
+    <p><a class="btn btn-primary btn-lg" href="/table" role="button">Compare Earth and Mars</a></p>
+    
+
+    </div>
+    <h2>Latest images of Mars' Hemispheres:</h2>
+<!-- Left-aligned -->
+<div class="media">
+  <div class="media-left">
+    <img src="{{data.mars_hl[0].img_url}}" class="media-object" style="width:200px">
   </div>
+  <div class="media-body">
+    <p> {{data.mars_hl[0].title}} </p>
   </div>
+</div>
+
+<div class="media">
+  <div class="media-left">
+    <img src="{{data.mars_hl[1].img_url}}" class="media-object" style="width:200px">
+  </div>
+  <div class="media-body">
+    <p> {{data.mars_hl[1].title}} </p>
+  </div>
+</div>
+<div class="media">
+  <div class="media-left">
+    <img src="{{data.mars_hl[2].img_url}}" class="media-object" style="width:200px">
+  </div>
+  <div class="media-body">
+    <p> {{data.mars_hl[2].title}} </p>
+  </div>
+</div>
+<div class="media">
+  <div class="media-left">
+    <img src="{{data.mars_hl[3].img_url}}" class="media-object" style="width:200px">
+  </div>
+  <div class="media-body">
+    <p> {{data.mars_hl[3].title}} </p>
+  </div>
+</div>
+
+
+
+
+
 </body>
 
 </html>
